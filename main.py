@@ -1,6 +1,4 @@
 from fastapi import FastAPI
-# from routers.auth import router
-# from routers.todo import todo_router
 from starlette.staticfiles import StaticFiles
 from config.config import get_settings
 from fastapi.templating import Jinja2Templates
