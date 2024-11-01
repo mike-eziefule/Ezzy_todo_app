@@ -8,8 +8,6 @@ from data.database import engine
 from data.model import Base
 from routers import auth, todo, web, user
 
-
-
 app = FastAPI(
     title="Ezzy todo application",
     description="A FastAPI-based todo app.",
@@ -25,7 +23,6 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 
 #Bindings database
 Base.metadata.create_all(bind=engine)
-
 
 # Include the router
 app.include_router(auth.router)
